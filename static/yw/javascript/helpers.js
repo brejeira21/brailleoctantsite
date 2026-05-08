@@ -639,10 +639,10 @@ if(state.worldModel.nsfw) {
 	if(check) {
 		check = JSON.parse(check);
 		if(!check[state.worldModel.name.toUpperCase()]) {
-			window.location.pathname = "/accounts/nsfw/" + state.worldModel.name;
+			window.location.pathname = "https://brejeira21.github.io/brailleoctantsite/accounts/nsfw/" + state.worldModel.name;
 		}
 	} else {
-		window.location.pathname = "/accounts/nsfw/" + state.worldModel.name;
+		window.location.pathname = "https://brejeira21.github.io/brailleoctantsite/accounts/nsfw/" + state.worldModel.name;
 	}
 }
 
