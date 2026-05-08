@@ -1823,9 +1823,9 @@ function getWorldProps(world, type, cb) {
 	if(!type) type = "style";
 	var propUrl;
 	if(type == "style") {
-		propUrl = "/world_style/";
+		propUrl = "https://brejeira21.github.io/brailleoctantsite/world_style/";
 	} else if(type == "props") {
-		propUrl = "/world_props/";
+		propUrl = "https://brejeira21.github.io/brailleoctantsite/world_props/";
 	} else {
 		console.error("Invalid type: " + type);
 		return cb(null, true);
@@ -5274,10 +5274,10 @@ function buildMenu() {
 	w.menu = menu;
 	var homeLink = document.createElement("a");
 	var homeLinkIcon = document.createElement("img");
-	homeLink.href = "/home";
+	homeLink.href = "https://brejeira21.github.io/brailleoctantsite/home";
 	homeLink.target = "_blank";
 	homeLink.innerHTML = "More...&nbsp";
-	homeLinkIcon.src = "/static/link.svg";
+	homeLinkIcon.src = "https://brejeira21.github.io/brailleoctantsite/static/link.svg";
 	homeLinkIcon.style.width = "12px";
 	homeLinkIcon.style.height = "12px";
 	homeLink.appendChild(homeLinkIcon);
@@ -6358,7 +6358,7 @@ var networkHTTP = {
 	urllink: function(tileX, tileY, charX, charY, url, callback) {
 		ajaxRequest({
 			type: "POST",
-			url: "/ajax/urllink/",
+			url: "https://brejeira21.github.io/brailleoctantsite/ajax/urllink/",
 			data: {
 				world: state.worldModel.name,
 				tileX, tileY, charX, charY,
@@ -6375,7 +6375,7 @@ var networkHTTP = {
 	coordlink: function(tileX, tileY, charX, charY, link_tileX, link_tileY, relative, callback) {
 		ajaxRequest({
 			type: "POST",
-			url: "/ajax/coordlink/",
+			url: "https://brejeira21.github.io/brailleoctantsite/ajax/coordlink/",
 			data: {
 				world: state.worldModel.name,
 				tileX, tileY, charX, charY,
@@ -6396,9 +6396,9 @@ var networkHTTP = {
 			tileX: tileX,
 			tileY: tileY
 		};
-		var url = "/ajax/protect/";
+		var url = "https://brejeira21.github.io/brailleoctantsite/ajax/protect/";
 		if(type == "unprotect") {
-			url = "/ajax/unprotect/";
+			url = "https://brejeira21.github.io/brailleoctantsite/ajax/unprotect/";
 		} else {
 			data.type = type;
 		}
@@ -6423,9 +6423,9 @@ var networkHTTP = {
 			charX: charX,
 			charY: charY
 		};
-		var url = "/ajax/protect/char/";
+		var url = "https://brejeira21.github.io/brailleoctantsite/ajax/protect/char/";
 		if(type == "unprotect") {
-			url = "/ajax/unprotect/char/";
+			url = "https://brejeira21.github.io/brailleoctantsite/ajax/unprotect/char/";
 		} else {
 			data.type = type;
 		}
@@ -8369,7 +8369,7 @@ function begin() {
 	protectPrecisionOption(protectPrecision);
 
 	if(state.userModel.is_superuser) {
-		w.loadScript("/static/yw/javascript/world_tools.js", function() {
+		w.loadScript("https://brejeira21.github.io/brailleoctantsite/static/yw/javascript/world_tools.js", function() {
 			w.wtwTracker = new WTWTracker(w);
 		});
 	}
