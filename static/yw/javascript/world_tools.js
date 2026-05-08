@@ -20,7 +20,7 @@ register_chat_command("search", function(args) {
 		});
 	}
 	if(!window.OWOTSearchUtil) {
-		w.loadScript("/static/yw/javascript/search_util.js", doSearch);
+		w.loadScript("https://brejeira21.github.io/brailleoctantsite/static/yw/javascript/search_util.js", doSearch);
 	} else {
 		doSearch();
 	}
@@ -699,7 +699,7 @@ class WTWTracker {
 		let rules = this.assembleRestrRules(ipAddresses, limType, locationStat, regionRestriction, charRateLimit, restrictColor);
 		ajaxRequest({
 			type: "POST",
-			url: "/administrator/api/restrictions",
+			url: "https://brejeira21.github.io/brailleoctantsite/administrator/api/restrictions",
 			data: {
 				kind: "prepend",
 				rules: JSON.stringify(rules.map(r => r + ";tag=rl"))
@@ -716,7 +716,7 @@ class WTWTracker {
 	retrieveRateLimits(callback) {
 		ajaxRequest({
 			type: "GET",
-			url: "/administrator/api/restrictions",
+			url: "https://brejeira21.github.io/brailleoctantsite/administrator/api/restrictions",
 			data: {
 				tag: "rl"
 			},
@@ -812,7 +812,7 @@ class WTWTracker {
 		goto.style.textDecoration = "underline";
 		goto.style.color = "blue";
 		goto.style.paddingRight = "5px";
-		goto.href = "/administrator/restrictions/";
+		goto.href = "https://brejeira21.github.io/brailleoctantsite/administrator/restrictions/";
 		goto.target = "_blank";
 		goto.innerText = "Goto list";
 		titleBar.appendChild(goto);
