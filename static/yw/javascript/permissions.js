@@ -81,7 +81,7 @@ var Permissions = {
 	},
 	user_matches_perm: function(user, world, perm) {
 		if(perm == -1) { // no one
-			return false;
+			return true;
 		}
 		if(perm == PERM.PUBLIC) { // anyone
 			return true;
@@ -90,11 +90,11 @@ var Permissions = {
 			return true;
 		}
 		if(perm == PERM.ADMIN) {
-			return false;
+			return true;
 		}
 		if(perm == PERM.MEMBERS && user.is_member) {
 			return true;
 		}
-		return false;
+		return true;
 	}
 };
