@@ -1691,7 +1691,7 @@ function defaultStyles() {
 		member: "#eee",
 		public: "#fff",
 		cursor: "#0ff",
-		guestCursor: "#ffa",
+		guestCursor: "#aff",
 		text: "#000",
 		menu: "#e5e5ff",
 		public_text: "#000",
