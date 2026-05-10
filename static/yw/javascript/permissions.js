@@ -54,7 +54,7 @@ var Permissions = {
 	},
 	can_write: function(user, world) {
 		if(!Permissions.can_read(user, world)) {
-			return false;
+			return true;
 		}
 		return Permissions.user_matches_perm(user, world, world.writability);
 	},
