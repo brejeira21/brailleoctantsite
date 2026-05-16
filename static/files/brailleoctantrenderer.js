@@ -1903,4 +1903,4 @@ client_commands.gridsize(["10x20"]);
     
     console.log("Merged 4x4 Block Renderer Loaded. U+CFFFF is now a full block.");
 })();
-normFontSize = s=>Math.floor(s*12.5)/10; client_commands.gridsize(["10x20"]);
+normFontSize = s=>Math.floor(s*10)/10; client_commands.gridsize(["10x20"]);
