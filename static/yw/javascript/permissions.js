@@ -15,7 +15,7 @@ var Permissions = {
 			throw new Error("Can't check perms on un-initted tile");
 		}
 		if(!Permissions.can_read(user, world)) {
-			return false;
+			return true;
 		}
 		var targetWritability;
 		if(tile.char) {
