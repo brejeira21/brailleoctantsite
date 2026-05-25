@@ -1723,9 +1723,9 @@ function getWorldProps(world, type, cb) {
 	if(!type) type = "style";
 	var propUrl;
 	if(type == "style") {
-		propUrl = "/world_style/";
+		propUrl = "https://ourworldoftext.com/world_style/";
 	} else if(type == "props") {
-		propUrl = "/world_props/";
+		propUrl = "https://ourworldoftext.com/world_props/";
 	} else {
 		console.error("Invalid type: " + type);
 		return cb(null, true);
@@ -6252,7 +6252,7 @@ var networkHTTP = {
 	urllink: function(tileX, tileY, charX, charY, url, callback) {
 		ajaxRequest({
 			type: "POST",
-			url: "/ajax/urllink/",
+			url: "https://ourworldoftext.com/ajax/urllink/",
 			data: {
 				world: state.worldModel.name,
 				tileX: tileX,
@@ -6272,7 +6272,7 @@ var networkHTTP = {
 	coordlink: function(tileX, tileY, charX, charY, link_tileX, link_tileY, callback) {
 		ajaxRequest({
 			type: "POST",
-			url: "/ajax/coordlink/",
+			url: "https://ourworldoftext.com/ajax/coordlink/",
 			data: {
 				world: state.worldModel.name,
 				tileX: tileX,
@@ -6297,9 +6297,9 @@ var networkHTTP = {
 			tileX: tileX,
 			tileY: tileY
 		};
-		var url = "/ajax/protect/";
+		var url = "https://ourworldoftext.com/ajax/protect/";
 		if(type == "unprotect") {
-			url = "/ajax/unprotect/";
+			url = "https://ourworldoftext.com/ajax/unprotect/";
 		} else {
 			data.type = type;
 		}
@@ -6324,9 +6324,9 @@ var networkHTTP = {
 			charX: charX,
 			charY: charY
 		};
-		var url = "/ajax/protect/char/";
+		var url = "https://ourworldoftext.com/ajax/protect/char/";
 		if(type == "unprotect") {
-			url = "/ajax/unprotect/char/";
+			url = "https://ourworldoftext.com/ajax/unprotect/char/";
 		} else {
 			data.type = type;
 		}
